@@ -9,7 +9,7 @@ const port = 3000;
 app.get("/", (req, res) => res.send("Maanavan.com"));
 app.listen(port, () => console.log("server is running"));
 
-var products = [
+const products = [
   {
     id: 1,
     name: "IPhone",
@@ -22,13 +22,13 @@ var products = [
   },
 ];
 
-var product = [
-    {
-      id: 1,
-      name: "IPhone",
-      price: 1000,
-    }
-  ];
+const product = [
+  {
+    id: 1,
+    name: "IPhone",
+    price: 1000,
+  },
+];
 
 app.get("/products", (req, res) => res.send(products));
 app.get("/products/1", (req, res) => res.send(product));
